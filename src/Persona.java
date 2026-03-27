@@ -1,7 +1,3 @@
-// ============================================================
-//  CLASE: Persona
-//  Representa al usuario que solicita materiales en prestamo.
-// ============================================================
 public class Persona {
 
     private String nombre;
@@ -9,7 +5,6 @@ public class Persona {
     private String celular;
     private String direccion;
 
-    // ── Constructor ──
     public Persona(String nombre, String identificacion,
                    String celular, String direccion) {
         this.nombre          = nombre;
@@ -18,7 +13,6 @@ public class Persona {
         this.direccion       = direccion;
     }
 
-    // ── Operaciones ──
 
     public String getResumen() {
         return String.format("Persona: %s | ID: %s | Cel: %s | Dir: %s",

@@ -1,7 +1,3 @@
-// ============================================================
-//  CLASE: Main  (Problema 2 - Biblioteca Digital)
-//  Prueba todas las clases, operaciones, getters y setters.
-// ============================================================
 public class Main {
 
     public static void main(String[] args) {
@@ -30,15 +26,12 @@ public class Main {
                 "A002", "Atomicos Habitos", "James Clear",
                 2018, 320, 480, "Carlos Leal", "WAV");
 
-        // ── Crear personas ──
         Persona p1 = new Persona("Brandon Garcia",  "INE-001", "228-555-0101", "Calle 5 #10");
         Persona p2 = new Persona("Ana Lopez",        "INE-002", "228-555-0202", "Av. Veracruz #33");
 
-        // ── Crear prestamos ──
         Prestamo prestamo1 = new Prestamo("2025-06-10", p1);
         Prestamo prestamo2 = new Prestamo("2025-06-10", p2);
 
-        // ── Agregar materiales a prestamo1 (max 3) ──
         System.out.println("\n── Prestamo 1: Brandon ──");
         prestamo1.agregarMaterial(libro1);
         prestamo1.agregarMaterial(revista1);
@@ -46,27 +39,22 @@ public class Main {
         // Intentar agregar un cuarto (debe rechazarse)
         prestamo1.agregarMaterial(libro2);
 
-        // ── Agregar materiales a prestamo2 ──
         System.out.println("\n── Prestamo 2: Ana ──");
         prestamo2.agregarMaterial(libro2);
         prestamo2.agregarMaterial(audio2);
         // Intentar prestar libro1 que ya esta prestado
         prestamo2.agregarMaterial(libro1);
 
-        // ── Mostrar informacion de prestamos activos ──
         System.out.println();
         prestamo1.mostrarInfo();
         System.out.println();
         prestamo2.mostrarInfo();
 
-        // ── Devolver prestamo1 ──
         prestamo1.devolverTodo("2025-06-11");
 
-        // ── Mostrar info actualizada (con fecha de devolucion) ──
         System.out.println();
         prestamo1.mostrarInfo();
 
-        // ── Probar getters ──
         System.out.println("\n── Prueba de getters ──");
         System.out.println("Codigo libro1     : " + libro1.getCodigo());
         System.out.println("Titulo libro1     : " + libro1.getTitulo());
@@ -94,7 +82,6 @@ public class Main {
         System.out.println("Persona prestamo1 : " + prestamo1.getPersona().getNombre());
         System.out.println("Cantidad mats     : " + prestamo1.getCantidad());
 
-        // ── Probar setters ──
         System.out.println("\n── Prueba de setters ──");
         libro2.setCodigo("L999");
         libro2.setTitulo("The Clean Coder");
@@ -125,7 +112,6 @@ public class Main {
         prestamo2.setPersona(p1);
         System.out.println("Prestamo2 actualizado: " + prestamo2.toString());
 
-        // ── toString de todos ──
         System.out.println("\n── toString ──");
         System.out.println(libro1);
         System.out.println(revista1);

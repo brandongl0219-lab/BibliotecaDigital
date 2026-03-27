@@ -1,13 +1,8 @@
-// ============================================================
-//  SUBCLASE: Revista  (extiende Material)
-//  Agrega numEdicion y mesPublicacion.
-// ============================================================
 public class Revista extends Material {
 
     private int    numEdicion;
     private String mesPublicacion;
 
-    // ── Constructor ──
     public Revista(String codigo, String titulo, String autor,
                    int anioPublicacion, int numPaginas,
                    int numEdicion, String mesPublicacion) {
@@ -16,7 +11,6 @@ public class Revista extends Material {
         this.mesPublicacion  = mesPublicacion;
     }
 
-    // ── Operaciones ──
 
     @Override
     public String getInfo() {

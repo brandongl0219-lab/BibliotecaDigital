@@ -1,14 +1,9 @@
-// ============================================================
-//  SUBCLASE: Audiolibro  (extiende Material)
-//  Agrega duracionMinutos, narrador y formato.
-// ============================================================
 public class Audiolibro extends Material {
 
     private int    duracionMinutos;
     private String narrador;
     private String formato;   // "MP3", "WAV", etc.
 
-    // ── Constructor ──
     public Audiolibro(String codigo, String titulo, String autor,
                       int anioPublicacion, int numPaginas,
                       int duracionMinutos, String narrador, String formato) {
@@ -17,8 +12,6 @@ public class Audiolibro extends Material {
         this.narrador        = narrador;
         this.formato         = formato;
     }
-
-    // ── Operaciones ──
 
     @Override
     public String getInfo() {

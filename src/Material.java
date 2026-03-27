@@ -1,13 +1,5 @@
-// ============================================================
-//  CLASE ABSTRACTA: Material
-//  Clase base de la jerarquía de la biblioteca.
-//  prestar() y devolver() están implementados aquí porque
-//  la lógica es igual para todos los tipos de material.
-//  getInfo() es abstracto: cada subclase muestra sus propios datos.
-// ============================================================
 public abstract class Material {
 
-    // ── Atributos ──
     private String codigo;
     private String titulo;
     private String autor;
@@ -15,7 +7,6 @@ public abstract class Material {
     private int    numPaginas;
     private String estado;   // "Disponible" o "Prestado"
 
-    // ── Constructor ──
     public Material(String codigo, String titulo, String autor,
                     int anioPublicacion, int numPaginas) {
         this.codigo          = codigo;
@@ -26,10 +17,6 @@ public abstract class Material {
         this.estado          = "Disponible";   // siempre inicia disponible
     }
 
-    // ── Operaciones ──
-
-    // Cambia estado a "Prestado" solo si esta disponible.
-    // Devuelve true si tuvo exito, false si ya estaba prestado.
     public boolean prestar() {
         if (estado.equals("Disponible")) {
             estado = "Prestado";
@@ -63,7 +50,6 @@ public abstract class Material {
     public int    getNumPaginas()      { return numPaginas; }
     public String getEstado()          { return estado; }
 
-    // ── Setters ──
     public void setCodigo(String codigo)               { this.codigo          = codigo; }
     public void setTitulo(String titulo)               { this.titulo          = titulo; }
     public void setAutor(String autor)                 { this.autor           = autor; }

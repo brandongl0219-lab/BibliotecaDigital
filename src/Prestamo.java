@@ -1,13 +1,3 @@
-// ============================================================
-//  CLASE: Prestamo
-//  Registra cada solicitud de prestamo.
-//  Reglas:
-//    - Maximo 3 materiales por prestamo.
-//    - Solo se presta si el material esta "Disponible".
-//    - Todos los prestamos son por un dia.
-//  El arreglo materiales[] es de tipo Material (polimorfismo):
-//  puede contener Libro, Revista o Audiolibro en el mismo arreglo.
-// ============================================================
 public class Prestamo {
 
     private static final int MAX_MATERIALES = 3;
@@ -18,7 +8,6 @@ public class Prestamo {
     private Persona    persona;
     private int        cantidad;      // cuantos materiales lleva actualmente
 
-    // ── Constructor ──
     public Prestamo(String fechaSolicitud, Persona persona) {
         this.fechaSolicitud  = fechaSolicitud;
         this.fechaDevolucion = "";
@@ -27,7 +16,6 @@ public class Prestamo {
         this.cantidad        = 0;
     }
 
-    // ── Operaciones ──
 
     public boolean agregarMaterial(Material m) {
         if (cantidad >= MAX_MATERIALES) {
